@@ -121,7 +121,7 @@ button {
 */
 
 .header {
-  padding: 24px 0 22px 0;
+  padding: 24px 0 24px 0;
 }
 @media only screen and (min-width: 768px) {
   .header {
@@ -277,6 +277,10 @@ button {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 480px) {
@@ -287,9 +291,6 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/bg-image/bg_mob@1x.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
   /* retina mobile screen */
   @media (min-device-pixel-ratio: 2),
@@ -428,18 +429,6 @@ button {
   | FEATURES
   |============================
 */
-/* @media only screen and (max-width: 1157px) {
-  .feature-container {
-    padding: 0;
-  }
-} */
-
-@media only screen and (min-width: 1158px) {
-  .feature-section {
-    padding-bottom: 0;
-  }
-}
-
 .feature-container-list {
   display: flex;
   flex-wrap: wrap;
@@ -521,6 +510,10 @@ button {
   | EXAMPLES
   |============================
 */
+.examples-section {
+  padding-top: 0;
+}
+
 @media only screen and (max-width: 1157px) {
   .examples-section {
     display: none;
@@ -704,7 +697,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    padding: 0 108px;
+    margin: 0 92px;
   }
 }
 
@@ -764,6 +757,7 @@ button {
 @media only screen and (min-width: 1158px) {
   .footer-socials-container {
     margin-right: 80px;
+    margin-bottom: 0;
   }
 }
 
@@ -855,6 +849,12 @@ button {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .subscribe-container {
+    margin-top: 72px;
+  }
+}
+
 .footer-input::placeholder {
   font-size: 12px;
   line-height: 2;
@@ -915,7 +915,12 @@ button {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-
+@media only screen and (max-width: 391px) {
+  .modal {
+    width: 100%;
+    left: 0;
+  }
+}
 @media only screen and (min-width: 768px) {
   .modal {
     width: 408px;
@@ -1211,7 +1216,7 @@ button {
 
 .mobile-menu .mobile-link {
   display: block;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 
   color: var(--navy-blue);
   font-weight: 700;
@@ -1220,9 +1225,13 @@ button {
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
-.mobile-menu {
+
+.mobile-menu-item {
+  margin-top: 40px;
+}
+
+.mobile-menu-container {
   margin-bottom: auto;
-  margin-top: 32px;
 }
 
 .mobile-nav-tel {
@@ -1232,6 +1241,17 @@ button {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--iris);
+}
+
+@media only screen and (max-width: 374px) {
+  .mobile-nav-tel {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .mobile-nav-tel {
+    font-size: 30px;
+  }
 }
 
 .nav-tel-item {
@@ -1252,15 +1272,14 @@ button {
 
 .mobile-socials {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 56px;
 }
 
-.mobile-socials {
-  display: flex;
-  justify-content: space-around;
-  gap: 0;
+@media only screen and (max-width: 360px) {
+  .mobile-socials {
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 
 .mobile-modal-btn {
@@ -1271,6 +1290,7 @@ button {
   height: 24px;
 
   margin-left: auto;
+  margin-bottom: 24px;
 
   background-color: rgba(231, 233, 252, 0.1);
   border: 1px solid rgb(46, 47, 66, 0.1);
